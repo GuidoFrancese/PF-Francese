@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  height: 200vh;
+  height: 100vh;
   font-family: 'Roboto Slab', serif; }
 
 header {
@@ -18,10 +18,10 @@ header {
 
 .hero {
   background-image: url("../assetes/images/agencia proyecto.webp");
-  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
   min-height: 500px;
-  height: 60vh;
-  color: #fff; }
+  height: 30vh; }
 
 .nav {
   --state-close: scale(0);
@@ -102,9 +102,9 @@ header {
     letter-spacing: none; } }
 
 main {
-  height: 120vh;
+  height: 60vh;
   background-color: blue; }
 
 footer {
-  height: 20vh;
+  height: 10vh;
   background-color: blueviolet; }
