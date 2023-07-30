@@ -1,13 +1,16 @@
 
 main{
     height: 120vh;
-    background: rgb(233,84,9);
-background: linear-gradient(90deg, rgba(233,84,9,1) 23%, rgba(224,168,44,1) 85%, rgba(252,176,69,1) 100%);
-}
-section{
     display: flex;
+    flex-wrap: wrap;
+    background: rgb(233,84,9);
+    background: linear-gradient(90deg, rgba(233,84,9,1) 23%, rgba(224,168,44,1) 85%, rgba(252,176,69,1) 100%);
+}
+
+section{
+    min-height: 80vh;
     width: 100%;
-    height: 80vh;
+    display: flex;
 }
 
 section img{
@@ -17,12 +20,14 @@ section img{
     opacity: .8;
     transition: .5s ease;
 }
+
 section img:hover{
     cursor: crosshair;
     width: 300px;
     opacity: 1;
     filter: contrast(120%);
 }
+
 .form-group {
     margin-bottom: 20px;
     display: inline-block;
