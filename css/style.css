@@ -25,7 +25,7 @@ header {
 
 .nav {
   --state-close: scale(0);
-  --state-hamburguer:scale(1);
+  --state-hamburguer: scale(1);
   --state-menu: translate(-100%);
   padding: 40px 0;
   display: grid;
@@ -47,7 +47,7 @@ header {
 .nav:target {
   --state-menu: translate(0);
   --state-close: scale(1);
-  --state-hamburguer:scale(0); }
+  --state-hamburguer: scale(0); }
 
 .nav__hamburguer {
   transform: var(--state-hamburguer); }
@@ -84,8 +84,9 @@ header {
 
 @media (min-width: 768px) {
   .nav {
-    --state-hamburguer:scale(0);
-    --state-menu: translate(0); }
+    --state-hamburguer: scale(0);
+    --state-menu: translate(0);
+    grid-template-columns: repeat(4, max-content); }
   .nav:target {
     --state-close: scale(0); }
   .nav__links {
@@ -95,8 +96,9 @@ header {
     gap: 1.5em;
     grid-auto-flow: column;
     transform: unset;
-    grid-column: -2/-1;
-    grid-row: 1/2; }
+    grid-column: -4/-1;
+    grid-row: 1/2;
+    justify-self: end; }
   .nav__link {
     font-size: 1rem;
     letter-spacing: none; } }
