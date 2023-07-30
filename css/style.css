@@ -105,7 +105,8 @@ header {
 
 main {
   height: 120vh;
-  background-color: blue; }
+  background: #e95409;
+  background: linear-gradient(90deg, #e95409 23%, #e0a82c 85%, #fcb045 100%); }
 
 section {
   display: flex;
