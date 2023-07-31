@@ -165,10 +165,10 @@ input[type="radio"] {
     width: 100%; } }
 
 footer {
-  height: 50vh;
+  height: 45vh;
   display: flex;
   flex-wrap: wrap;
-  background-color: black; }
+  background-color: #272727; }
 
 .containere {
   max-width: 600px;
@@ -184,8 +184,8 @@ footer {
   flex-wrap: wrap; }
 
 .footer-links {
-  width: 25%;
-  padding: 0 15px; }
+  flex-basis: 25%;
+  padding: 0 90px; }
 
 .footer-links h4 {
   font-size: 20px;
@@ -212,7 +212,7 @@ footer {
   display: inline-block;
   min-height: 40px;
   width: 40px;
-  background-color: #1009e9;
+  background-color: black;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
