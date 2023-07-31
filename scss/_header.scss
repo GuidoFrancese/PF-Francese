@@ -56,7 +56,7 @@ header {
 }
 
 .nav__icon {
-   width: 40px;
+    width: 40px;
 }
 
 .nav__links {
@@ -97,6 +97,120 @@ header {
 
     .nav:target {
         --state-close: scale(0);
+        --state-hamburguer: scale(1);
+        --state-menu: translate(-100%);
+    }
+
+    .nav__links {
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        gap: 1.5em;
+        grid-auto-flow: column;
+
+        transform: unset;
+
+        grid-column: -4/-1;
+        grid-row: 1/2;
+
+        justify-self: end;
+    }
+
+    .nav__link {
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .nav {
+        --state-hamburguer: scale(0);
+        --state-menu: translate(0);
+        grid-template-columns: repeat(4, max-content);
+    }
+
+    .nav__links {
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        gap: 1.5em;
+        grid-auto-flow: column;
+
+        transform: unset;
+
+        grid-column: -4/-1;
+        grid-row: 1/2;
+
+        justify-self: end;
+    }
+
+    .nav__link {
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .nav {
+        --state-hamburguer: scale(0);
+        --state-menu: translate(0);
+        grid-template-columns: repeat(4, max-content);
+    }
+
+    .nav__links {
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        gap: 1.5em;
+        grid-auto-flow: column;
+
+        transform: unset;
+
+        grid-column: -4/-1;
+        grid-row: 1/2;
+
+        justify-self: end;
+    }
+
+    .nav__link {
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .nav {
+        --state-hamburguer: scale(0);
+        --state-menu: translate(0);
+        grid-template-columns: repeat(4, max-content);
+    }
+
+    .nav__links {
+        padding: 0;
+        background-color: unset;
+        position: unset;
+        gap: 1.5em;
+        grid-auto-flow: column;
+
+        transform: unset;
+
+        grid-column: -4/-1;
+        grid-row: 1/2;
+
+        justify-self: end;
+    }
+
+    .nav__link {
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .nav {
+        --state-hamburguer: scale(0);
+        --state-menu: translate(0);
+        grid-template-columns: repeat(4, max-content);
     }
 
     .nav__links {

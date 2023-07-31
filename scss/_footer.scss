@@ -1,17 +1,16 @@
-footer{
-    height: 45vh;
+footer {
+    height: 300px; /* Ajusta el valor según tus necesidades */
     display: flex;
     flex-wrap: wrap;
     background-color: rgb(39, 39, 39);
 }
 
-.containere{
-    max-width: 600px;
+.container {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .footer {
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -54,7 +53,7 @@ footer{
     display: inline-block;
     min-height: 40px;
     width: 40px;
-    background-color:rgb(0, 0, 0) ;
+    background-color: rgb(0, 0, 0);
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
@@ -63,16 +62,38 @@ footer{
 }
 
 .social-links a:hover{
-    background-color:rgb(233,84,9) ;
+    background-color: rgb(233,84,9);
 }
 
-@media(max-width: 991px){
+@media (min-width: 768px) and (max-width: 1024px) {
     .footer-row{
         text-align: center;
     }
 
-    .footer-links{
-        width: 100%;
-        margin-bottom: 30px;
+.footer-links{
+    width: 100%;
+    margin-bottom: 30px;
+}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .footer-row{
+        text-align: center;
     }
+
+.footer-links{
+    width: 100%;
+    margin-bottom: 30px;
+}
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .footer-row{
+        text-align: center;
+    }
+
+.footer-links{
+    width: 100%;
+    margin-bottom: 30px;
+}
 }
