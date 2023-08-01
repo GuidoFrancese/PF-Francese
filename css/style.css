@@ -108,101 +108,37 @@ body {
     font-size: 1rem;
     letter-spacing: none; } }
 
-main {
-  height: 120vh;
+.main {
+  grid-area: main;
+  background-color: #db7b21;
   display: flex;
-  flex-wrap: wrap;
-  background: #e95409;
-  background: linear-gradient(90deg, #e95409 23%, #e0a82c 85%, #fcb045 100%);
-  padding-bottom: 50px;
-  /* Ajusta el valor según tus necesidades para dejar espacio para el footer */ }
+  justify-content: center;
+  align-items: center; }
 
-section {
-  min-height: 80vh;
+.carousel-container {
+  max-width: 100%;
+  overflow: hidden; }
+
+#carousel-section {
+  min-height: 60vh;
   width: 100%;
-  display: flex; }
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll; }
 
-section h2 {
-  text-align: center; }
-
-section img {
-  width: 0px;
-  flex-grow: 1;
+#carousel-section img {
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: center;
   object-fit: cover;
   opacity: .8;
   transition: .5s ease; }
 
-section img:hover {
+#carousel-section img:hover {
   cursor: crosshair;
-  width: 150px;
-  opacity: 1;
-  filter: contrast(120%); }
-
-.form-group {
-  margin-bottom: 20px;
-  display: inline-block;
-  width: 45%;
-  /* ajusta este valor según tus necesidades */ }
-
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px; }
-
-select,
-input[type="radio"] {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px; }
-
-.btn {
-  padding: 10px 20px;
-  background-color: #af904c;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer; }
-
-.btn:hover {
-  background-color: #e95409; }
-
-@media (max-width: 600px) {
-  .form-group {
-    width: 100%; } }
-
-/* Pantallas de escritorio de alta resolución / @media (min-width: 1281px) { / Ajusta los estilos para esta resolución */
-/* Tablets y iPads en modo vertical */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .container {
-    max-width: 100%; }
-  .form-group {
-    display: block;
-    width: 100%; } }
-
-/* Tablets y iPads en modo horizontal */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .container {
-    max-width: 100%; }
-  .form-group {
-    display: block;
-    width: 100%; } }
-
-/* Baja resolución Tablets y Mobiles en modo horizontal */
-@media (min-width: 481px) and (max-width: 767px) {
-  .container {
-    max-width: 100%; }
-  .form-group {
-    display: block;
-    width: 100%; } }
-
-/* La mayoría de los Smartphones en modo vertical */
-@media (min-width: 320px) and (max-width: 480px) {
-  .container {
-    max-width: 100%; }
-  .form-group {
-    display: block;
-    width: 100%; } }
+  opacity: 2;
+  filter: contrast(120%); }
 
 footer {
   height: 300px;
