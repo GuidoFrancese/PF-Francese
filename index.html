@@ -1,27 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS GRID Menú</title>
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
-<body>
-
-    <header class="hero">
-
+<body class="grid-container">
+    <header class="header">
         <nav class="nav container" id="nav">
-           
-
             <ul class="nav__links">
-
                 <li class="nav__item">
                     <a href="#" class="nav__link">Inicio</a>
                 </li>
@@ -37,141 +26,160 @@
                 <li class="nav__item">
                     <a href="#" class="nav__link">Contacto</a>
                 </li>
-
             </ul>
-
             <a href="#nav" class="nav__hamburguer">
                 <img src="./assetes/images/menu-desplegable.png" class="nav__icon">
             </a>
-
             <a href="#" class="nav__close">
                 <img src="./assetes/images/menu-desplegable.png" class="nav__icon">
             </a>
-
         </nav>
-        
     </header>
-    <main>
-        <section id="carousel-section">
-            <img src="./assetes/images/308 blanco proyecto.webp" alt="">
-            <img src="./assetes/images/208 proyecto.webp" alt="">
-            <img src="./assetes/images/Fiesta(2) proyecto.webp" alt="">
-            <img src="./assetes/images/s10 nueva proyecto.webp" alt="">
-            <img src="./assetes/images/Vento(3) proyecto.webp" alt="">
-        </section>
-        <section id="form-section">
-            <div class="container">
-                <h2>¿Que estas buscando?</h2>
-    
-                <form>
-                    <div class="form-group">
-                        <label for="condicion">Estado</label>
-                        <select id="condicion">
-                          <option value="nuevo">Nuevo</option>
-                          <option value="usado">Usado</option>
-                        </select>
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="tipo">Tipo de vehículo</label>
-                        <select id="tipo">
-                          <option value="automovil">Automóvil</option>
-                          <option value="camioneta">Camioneta</option>
-                          <option value="moto">Moto</option>
-                        </select>
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="marca">Marca</label>
-                        <select id="marca">
-                          <option value="peugeot">Peugeot</option>
-                          <option value="chevrolet">Chevrolet</option>
-                          <option value="honda">Honda</option>
-                          <option value="ford">Ford</option>
-                          <option value="volskwahen">Volskwahen</option>
-                          <option value="toyota">Toyota</option>
-                          <option value="renault">Renault</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="marca">Kilometros</label>
-                        <select id="marca">
-                          <option value="0">0</option>
-                          <option value="10000">10000-50000</option>
-                          <option value="50000">50000-100000</option>
-                          <option value="100000">100000-500000</option>
-                          <option value="500000">500000-1000000</option>
-                          <option value="1000000">1000000-+</option>
-                          
-                        </select>
-                    </div>
-    
-                    <button type="submit" class="btn">Buscar</button>
-                </form>
+    <nav class="navbare">
+        <form>
+            <div class="form-group">
+              <label for="busqueda">¿Qué vehículo buscas?</label>
             </div>
-        </section>
-    </main>
-<footer class="footer">
+          
+            <div class="form-group">
+              <label for="estado">Estado</label>
+              <select id="estado" name="estado" required>
+                <option value="">Selecciona una opción</option>
+                <option value="nuevo">Nuevo</option>
+                <option value="usado">Usado</option>
+              </select>
+            </div>
+          
+            <div class="form-group">
+              <label for="tipo">Tipo de vehículo</label>
+              <select id="tipo" name="tipo" required>
+                <option value="">Selecciona una opción</option>
+                <option value="auto">Auto</option>
+                <option value="camioneta">Camioneta</option>
+                <option value="moto">Moto</option>
+              </select>
+            </div>
+          
+            <div class="form-group">
+              <label for="marca">Marca</label>
+              <select id="marca" name="marca" required>
+                <option value="">Selecciona una opción</option>
+                <option value="peugeot">Peugeot</option>
+                <option value="ford">Ford</option>
+                <option value="chevrolet">Chevrolet</option>
+                <option value="peugeot">Fiat</option>
+                <option value="ford">Honda</option>
+                <option value="gol">Hyundai</option>
+                <option value="chevrolet">Renault</option>
+                <option value="ford">Toyota</option>
+                <option value="gol">Volkswagen</option>
+                <option value="chevrolet">Jeep</option>
+              </select>
+            </div>
+          
+            <div class="form-group">
+              <label for="kilometros">Kilómetros</label>
+              <select id="kilometros" name="kilometros" required>
+                <option value="">Selecciona una opción</option>
+                <option value="0">0</option>
+                <option value="100">+1000</option>
+                <option value="200">+5000</option>
+                <option value="3000">+10000</option>
+                <option value="5000">+100000</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="color">¿Que color buscas?</label>
+                <input type="color" id="busqueda" name="busqueda" required>
+              </div>
+          
+            <button type="submit">Buscar</button>
+          </form>
+    </nav>
+    </nav>
+        <aside class="sidebar">
+            <div class="car-brands">
+                <img src="./assetes/images/logo fiat.png" alt="logo2">
+                <img src="./assetes/images/Jeep-Logo-1970-1.png" alt="logo7">
+               <img src="./assetes/images/logo honda.png" alt="logo1">
+               <img src="./assetes/images/Chevrolet-logo-41.png" alt="logo4">
+               <img src="./assetes/images/logo-Renault.png" alt="logo5">
+               <img src="./assetes/images/Ford_logo.svg.png" alt="logo6">
+               <img src="./assetes/images/Hyundai-Logo-2011.png" alt="logo8">
+               <img src="./assetes/images/Volkswagen-Logo-PNG-Image.png" alt="logo3">
+            </div>
+         </aside>
+    
+    <article class="main">
+        <div class="carousel-container">
+            <section id="carousel-section">
+                <img src="./assetes/images/308 blanco proyecto.webp" alt="">
+                <img src="./assetes/images/208 proyecto.webp" alt="">
+                <img src="./assetes/images/Fiesta(2) proyecto.webp" alt="">
+                <img src="./assetes/images/s10 nueva proyecto.webp" alt="">
+                <img src="./assetes/images/Vento(3) proyecto.webp" alt="">
+            </section>
+          </div>
+    </article>
+    <footer class="footer">
 
-<div class="conteinere">
-
-    <div class="footer-row">
-
-        <div class="footer-links">
-
-            <h4>COMPAÑIA</h4>
-            <ul>
-                <li>
-                    <a href="#">Nostros</a>
-                    <a href="#">Nuestros Servicios</a>
-                    <a href="#">Politica de privacidad</a>
-                    <a href="#">Afiliate</a>
-                </li>
-            </ul>
-
+        <div class="conteinere">
+        
+            <div class="footer-row">
+        
+                <div class="footer-links">
+        
+                    <h4>COMPAÑIA</h4>
+                    <ul>
+                        <li>
+                            <a href="#">Nosotros</a>
+                            <a href="#">Nuestros Servicios</a>
+                            <a href="#">Politica de privacidad</a>
+                        </li>
+                    </ul>
+        
+                </div>
+        
+                <div class="footer-links">
+        
+                    <h4 >AYUDA</h4>
+                    <ul>
+                        <li>
+                            <a href="#">¿Preguntas?</a>
+                            <a href="#">Ventas</a>
+                            <a href="#">Medios de pago</a>
+                            
+                        </li>
+                    </ul>
+        
+                </div>
+        
+                <div class="footer-links">
+        
+                    <h4>Lugares</h4>
+                    <ul>
+                        <li>
+                            <a href="#">Mendoza</a>
+                            <a href="#">San Luis</a>
+                            <a href="#">Cordoba</a>
+                            <a href="#">San Juan</a>
+                        </li>
+                    </ul>
+        
+                </div>
+                <div class="footer-links">
+        
+                    <h4>Siguenos</h4>
+                   <div class="social-links">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                   </div>
+        
+                </div>
+            </div>
         </div>
-
-        <div class="footer-links">
-
-            <h4>AYUDA</h4>
-            <ul>
-                <li>
-                    <a href="#">¿Preguntas?</a>
-                    <a href="#">Ventas</a>
-                    <a href="#">Medios de pago</a>
-                    
-                </li>
-            </ul>
-
-        </div>
-
-        <div class="footer-links">
-
-            <h4>Lugares</h4>
-            <ul>
-                <li>
-                    <a href="#">Mendoza</a>
-                    <a href="#">San Luis</a>
-                    <a href="#">Cordoba</a>
-                    <a href="#">San Juan</a>
-                </li>
-            </ul>
-
-        </div>
-        <div class="footer-links">
-
-            <h4>Siguenos</h4>
-           <div class="social-links">
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-            <a href=""><i class="fab fa-instagram"></i></a>
-            <a href=""><i class="fab fa-twitter"></i></a>
-           </div>
-
-        </div>
-    </div>
-</div>
-
-</footer>
-</body>
-
+        
+        </footer>
+  </body>
 </html>

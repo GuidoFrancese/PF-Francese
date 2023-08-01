@@ -70,7 +70,7 @@ input[type="radio"] {
     }
 }
 
-/* Pantallas de escritorio de alta resolución / @media (min-width: 1281px) { / Ajusta los estilos para esta resolución */ 
+/* Pantallas de escritorio de alta resolución / @media (min-width: 1281px) { / Ajusta los estilos para esta resolución */
 
 /* Tablets y iPads en modo vertical */
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -111,15 +111,12 @@ input[type="radio"] {
 /* La mayoría de los Smartphones en modo vertical */
 @media (min-width: 320px) and (max-width: 480px) {
 
-    .container {
-        max-width: 100%;
-    }
-
+.container {
+    max-width: 100%;
+}
 .form-group {
     display: block;
     width: 100%;
 }
 
-
 }
- 
