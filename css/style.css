@@ -157,7 +157,6 @@ body {
   overflow: hidden; }
 
 #carousel-section {
-  min-height: 60vh;
   width: 100%;
   display: flex;
   scroll-snap-type: x mandatory;
