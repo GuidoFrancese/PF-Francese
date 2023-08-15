@@ -52,7 +52,7 @@ body {
 
 .header {
   grid-area: header;
-  background-image: url("../assetes/images/logo principal.jpeg");
+  background-image: url(../assetes/images/aagencianew2.jpeg);
   background-size: 100%;
   background-repeat: no-repeat;
   min-height: 100%;
