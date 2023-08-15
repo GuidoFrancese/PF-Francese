@@ -167,8 +167,7 @@ margin-left: 40px;
   width: 100%;
   display: flex;
   scroll-snap-type: x mandatory;
-  overflow-x: scroll;
-color: #AB8543; }
+  overflow-x: scroll; }
   #carousel-section img {
     width: 100%;
     flex-shrink: 0;
@@ -409,10 +408,9 @@ color: #AB8543; }
 
 .footer {
   grid-area: footer;
-  background-color: #8c96a0;
+  background-color: #AB8543;
   display: flex;
   flex-wrap: wrap;
-  background: linear-gradient(90deg, #736f6b 3%, black 50%, #87817d 100%);
   flex-wrap: wrap;
   justify-content: space-around; }
 
@@ -432,7 +430,7 @@ color: #AB8543; }
     color: beige;
     margin-bottom: 25px;
     font-weight: 500;
-    border-bottom: 2px solid #e95409;
+    border-bottom: 2px solid #DDC79A;
     padding-bottom: 10px;
     display: inline-block; }
   .footer-links ul li a {
@@ -450,7 +448,7 @@ color: #AB8543; }
   display: inline-block;
   min-height: 40px;
   width: 40px;
-  background-color: #c98123;
+  background-color: #3a3427;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
@@ -530,7 +528,7 @@ color: #AB8543; }
 
 .navbare {
   grid-area: navbar;
-  background: linear-gradient(90deg, #736f6b 3%, black 50%, #87817d 100%);
+  background-color: #DDC79A;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -543,7 +541,8 @@ form {
 
 .form-group {
   width: 48%;
-  margin-bottom: 10px; }
+  margin-bottom: 10px; 
+color: #AB8543 ;}
 
 label {
   display: block;
@@ -564,7 +563,7 @@ select {
 
 button {
   padding: 10px 20px;
-  background-color: #db7b21;
+  background-color: #AB8543 ;
   color: white;
   border: none;
   border-radius: 5px;
@@ -634,7 +633,7 @@ button {
 
 .sidebar {
   grid-area: sidebar;
-  background: radial-gradient(circle, #c37322 0%, #ffc13b 100%); }
+  background-color: #BFAB82; }
 
 .car-brands {
   display: flex;
