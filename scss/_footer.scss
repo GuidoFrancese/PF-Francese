@@ -1,23 +1,20 @@
 $color_1: beige;
 $color_2: aliceblue;
 $color_3: white;
+$background-color_1: #AB8543;
+$background-color_2: #3a3427;
+$background-color_3: black;
 
 .footer {
 	grid-area: footer;
-	background-color: #8c96a0;
+	background-color: $background-color_1;
 	display: flex;
-	flex-wrap: wrap;
-	background: linear-gradient(90deg, rgba(115,111,107,1) 3%, rgba(0,0,0,1) 50%, rgba(135,129,125,1) 100%);
-	flex-wrap: wrap;
 	justify-content: space-around;
-}
-.containere {
-	max-width: 1200px;
-	margin: 0 auto;
 }
 .footer-row {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .footer-links {
 	flex-basis: 25%;
@@ -27,12 +24,13 @@ $color_3: white;
 		color: $color_1;
 		margin-bottom: 25px;
 		font-weight: 500;
-		border-bottom: 2px solid rgb(233,84,9);
+		border-bottom: 2px solid #DDC79A;
 		padding-bottom: 10px;
 		display: inline-block;
 	}
 	ul {
 		li {
+			list-style: none;
 			a {
 				font-size: 18px;
 				text-decoration: none;
@@ -53,14 +51,14 @@ $color_3: white;
 		display: inline-block;
 		min-height: 40px;
 		width: 40px;
-		background-color: rgb(201, 129, 35);
+		background-color: $background-color_2;
 		text-align: center;
 		line-height: 40px;
 		border-radius: 50%;
 		color: $color_3;
 		transition: all .5s ease;
 		&:hover {
-			background-color: rgb(0, 0, 0);
+			background-color: $background-color_3;
 		}
 	}
 }
@@ -83,7 +81,7 @@ $color_3: white;
 	}
 }
 @media only screen and (min-width: 320px) and (max-width: 736px) {
-    .footer-links {
+	.footer-links {
 		flex-basis: 5%;
 		padding: 0 10px;
 		ul {
@@ -109,14 +107,14 @@ $color_3: white;
 			color: $color_1;
 			margin-bottom: 25px;
 			font-weight: 500;
-			border-bottom: 2px solid rgb(233,84,9);
+			border-bottom: 2px solid #3a3427;
 			padding-bottom: 10px;
 			display: inline-block;
 			font-size: 15px;
 			color: $color_1;
 			margin-bottom: 25px;
 			font-weight: 500;
-			border-bottom: 2px solid rgb(233,84,9);
+			border-bottom: 2px solid #3a3427;
 			padding-bottom: 10px;
 			display: inline-block;
 		}
@@ -126,7 +124,7 @@ $color_3: white;
 			display: inline-block;
 			min-height: 40px;
 			width: 40px;
-			background-color: rgb(0, 0, 0);
+			background-color: $background-color_2;
 			text-align: center;
 			line-height: 40px;
 			border-radius: 50%;
@@ -135,7 +133,7 @@ $color_3: white;
 			display: inline-block;
 			min-height: 40px;
 			width: 40px;
-			background-color: rgb(0, 0, 0);
+			background-color: $background-color_3;
 			text-align: center;
 			line-height: 40px;
 			border-radius: 50%;
@@ -144,10 +142,9 @@ $color_3: white;
 		}
 	}
 }
-	
-    @media only screen and (min-width: 320px) {
-        .footer-links {
-          flex-basis: 10%;
-          padding: 0 5px;
-        }
-      }	
+@media only screen and (min-width: 320px) {
+	.footer-links {
+		flex-basis: 10%;
+		padding: 0 1px;
+	}
+}
