@@ -61,6 +61,12 @@ body {
     --state-menu: translate(0);
     --state-close: scale(1);
     --state-hamburguer: scale(0); }
+  @media (min-width: 768px) {
+    .nav {
+      --state-hamburguer: scale(0);
+      --state-menu: translate(0); }
+      .nav:target {
+        --state-close: scale(0); } }
 
 .nav__logo {
   font-size: 2.5rem;
@@ -95,31 +101,26 @@ body {
   padding-left: 5%;
   transform: var(--state-menu);
   transition: .3s transform; }
+  @media (min-width: 768px) {
+    .nav__links {
+      padding: 0;
+      background-color: unset;
+      position: unset;
+      gap: 1.5em;
+      grid-auto-flow: column;
+      transform: unset;
+      grid-column: -2/-1;
+      grid-row: 1/2; } }
 
 .nav__link {
   color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
   letter-spacing: 2px; }
-
-@media (min-width: 768px) {
-  .nav {
-    --state-hamburguer: scale(0);
-    --state-menu: translate(0); }
-    .nav:target {
-      --state-close: scale(0); }
-  .nav__links {
-    padding: 0;
-    background-color: unset;
-    position: unset;
-    gap: 1.5em;
-    grid-auto-flow: column;
-    transform: unset;
-    grid-column: -2/-1;
-    grid-row: 1/2; }
-  .nav__link {
-    font-size: 1rem;
-    letter-spacing: normal; } }
+  @media (min-width: 768px) {
+    .nav__link {
+      font-size: 1rem;
+      letter-spacing: normal; } }
 
 .form-register .botons {
   width: 100%;
@@ -514,17 +515,15 @@ carousel-section {
   width: 48%;
   margin-bottom: 10px;
   color: #AB8543; }
-
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px; }
-
-select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid;
-  border-radius: 5px; }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px; }
+  .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 5px; }
 
 .navbare {
   grid-area: navbar;
@@ -540,22 +539,20 @@ form {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%; }
-
-input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid;
-  border-radius: 5px; }
-
-button {
-  padding: 10px 20px;
-  background-color: #AB8543;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer; }
-  button:hover {
-    background-color: #070707; }
+  form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid;
+    border-radius: 5px; }
+  form button {
+    padding: 10px 20px;
+    background-color: #AB8543;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; }
+    form button:hover {
+      background-color: #070707; }
 
 @media only screen and (max-width: 768px) {
   .form-group {
@@ -568,25 +565,25 @@ button {
     text-align: center;
     font-size: smaller;
     font-family: Arial, Helvetica, sans-serif; }
-  label {
-    font-weight: bold;
-    margin-bottom: 5px; }
-  select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid;
-    border-radius: 5px; }
-  button {
-    padding: 10px 20px;
-    background-color: #AB8543;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 1px 1px;
-    height: 40px; }
-    button:hover {
-      background-color: #070707; } }
+    .form-group label {
+      font-weight: bold;
+      margin-bottom: 5px; }
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid;
+      border-radius: 5px; }
+    .form-group button {
+      padding: 10px 20px;
+      background-color: #AB8543;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 1px 1px;
+      height: 40px; }
+      .form-group button:hover {
+        background-color: #070707; } }
 
 @media only screen and (min-width: 320px) and (max-width: 736px) {
   .form-group {
@@ -599,25 +596,25 @@ button {
     text-align: center;
     font-size: x-small;
     font-family: Arial, Helvetica, sans-serif; }
-  label {
-    font-weight: bold;
-    margin-bottom: 5px; }
-  select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid;
-    border-radius: 5px; }
-  button {
-    padding: 10px 20px;
-    background-color: #AB8543;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    padding: 1px 1px;
-    height: 40px; }
-    button:hover {
-      background-color: #070707; } }
+    .form-group label {
+      font-weight: bold;
+      margin-bottom: 5px; }
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid;
+      border-radius: 5px; }
+    .form-group button {
+      padding: 10px 20px;
+      background-color: #AB8543;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 1px 1px;
+      height: 40px; }
+      .form-group button:hover {
+        background-color: #070707; } }
 
 .sidebar {
   grid-area: sidebar;

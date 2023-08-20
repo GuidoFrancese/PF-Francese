@@ -34,16 +34,14 @@ $background-color_3: #070707;
   width: 48%;
   margin-bottom: 10px;
   color: $color_1;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-select {
-  @include input-style;
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  select {
+    @include input-style;
+  }
 }
 
 .navbare {
@@ -57,14 +55,12 @@ form {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-}
-
-input {
-  @include input-style;
-}
-
-button {
-  @include button-style;
+  input {
+    @include input-style;
+  }
+  button {
+    @include button-style;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -76,47 +72,41 @@ button {
     text-align: center;
     font-size: smaller;
     font-family: $font-family_1;
-  }
-
-  label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  select {
-    @include input-style;
-  }
-
-  button {
-    @include button-style;
-    padding: 1px 1px;
-    height: 40px;
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    select {
+      @include input-style;
+    }
+    button {
+      @include button-style;
+      padding: 1px 1px;
+      height: 40px;
+    }
   }
 }
 
 @media only screen and (min-width: 320px) and (max-width: 736px) {
   .form-group {
-    @include flex-center; 
+    @include flex-center;
     flex-direction: column;
     width: min-content;
     height: min-content;
     text-align: center;
     font-size: x-small;
     font-family: $font-family_1;
-  }
-
-  label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  select {
-    @include input-style;
-  }
-
-  button {
-    @include button-style;
-    padding: 1px 1px;
-    height: 40px;
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    select {
+      @include input-style;
+    }
+    button {
+      @include button-style;
+      padding: 1px 1px;
+      height: 40px;
+    }
   }
 }

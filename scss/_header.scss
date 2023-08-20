@@ -1,3 +1,136 @@
+// $color_1: #fff;
+// $background-color_1: #AB8543;
+// $background-color_2: unset;
+
+// @mixin text-color($color) {
+//   color: $color;
+// }
+
+// @mixin font-size($size) {
+//   font-size: $size;
+// }
+
+// @mixin background-image($url, $size) {
+//   background-image: url($url);
+//   background-size: $size;
+// }
+
+// @mixin container {
+//   margin: 0 auto;
+//   max-width: 1200px;
+// }
+
+// %nav-item {
+//   list-style: none;
+// }
+
+// .header {
+//   grid-area: header;
+//   @include background-image('../assetes/images/aagencianew2.jpeg', 100%);
+//   background-repeat: no-repeat;
+//   min-height: 100%;
+//   height: 40%;
+// }
+
+// .container {
+//   @include container;
+//   overflow: hidden;
+// }
+
+// .nav {
+//   --state-close: scale(0);
+//   --state-hamburguer: scale(1);
+//   --state-menu: translate(-100%);
+//   padding: 40px 0;
+//   display: grid;
+//   justify-content: start;
+//   grid-template-columns: repeat(2, max-content);
+  
+//   &:target {
+//     --state-menu: translate(0);
+//     --state-close: scale(1);
+//     --state-hamburguer: scale(0);
+//   }
+// }
+
+// .nav__logo {
+//   font-size: 2.5rem;
+//   z-index: 1;
+// }
+
+// .navhamburguer, .navclose {
+//   cursor: pointer;
+//   grid-column: -2/-1;
+//   grid-row: 1/2;
+//   transition: .4s transform;
+// }
+
+// .nav__hamburguer, .nav__close {
+//   transform: var(--state-hamburguer);
+// }
+
+// .nav__close {
+//   transform: var(--state-close);
+// }
+
+// .nav__icon {
+//   width: 40px;
+// }
+
+// .nav__links {
+//   background-color: $background-color_1;
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   padding: 0;
+//   display: grid;
+//   align-content: center;
+//   gap: 2em;
+//   padding-left: 5%;
+//   transform: var(--state-menu);
+//   transition: .3s transform;
+// }
+
+// .nav__item {
+//   @extend %nav-item;
+// }
+
+// .nav__link {
+//   @extend %nav-item; 
+//   @include text-color($color_1);
+//   text-decoration: none;
+//   @include font-size(1.2rem);
+//   letter-spacing: 2px;
+// }
+
+// @media (min-width: 768px) {
+//   .nav {
+//     --state-hamburguer: scale(0);
+//     --state-menu: translate(0);
+    
+//     &:target {
+//       --state-close: scale(0);
+//     }
+//   }
+  
+//   .nav__links {
+//     padding: 0;
+//     background-color: $background-color_2;
+//     position: unset;
+//     gap: 1.5em;
+//     grid-auto-flow: column;
+//     transform: unset;
+//     grid-column: -2/-1;
+//     grid-row: 1/2;
+//   }
+  
+//   .nav__link {
+//     @include font-size(1rem);
+//     letter-spacing: normal;
+//   }
+// }
 $color_1: #fff;
 $background-color_1: #AB8543;
 $background-color_2: unset;
@@ -51,6 +184,15 @@ $background-color_2: unset;
     --state-close: scale(1);
     --state-hamburguer: scale(0);
   }
+  
+  @media (min-width: 768px) {
+    --state-hamburguer: scale(0);
+    --state-menu: translate(0);
+    
+    &:target {
+      --state-close: scale(0);
+    }
+  }
 }
 
 .nav__logo {
@@ -91,6 +233,17 @@ $background-color_2: unset;
   padding-left: 5%;
   transform: var(--state-menu);
   transition: .3s transform;
+
+  @media (min-width: 768px) {
+    padding: 0;
+    background-color: $background-color_2;
+    position: unset;
+    gap: 1.5em;
+    grid-auto-flow: column;
+    transform: unset;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+  }
 }
 
 .nav__item {
@@ -103,35 +256,12 @@ $background-color_2: unset;
   text-decoration: none;
   @include font-size(1.2rem);
   letter-spacing: 2px;
-}
-
-@media (min-width: 768px) {
-  .nav {
-    --state-hamburguer: scale(0);
-    --state-menu: translate(0);
-    
-    &:target {
-      --state-close: scale(0);
-    }
-  }
   
-  .nav__links {
-    padding: 0;
-    background-color: $background-color_2;
-    position: unset;
-    gap: 1.5em;
-    grid-auto-flow: column;
-    transform: unset;
-    grid-column: -2/-1;
-    grid-row: 1/2;
-  }
-  
-  .nav__link {
+  @media (min-width: 768px) {
     @include font-size(1rem);
     letter-spacing: normal;
   }
 }
-
 
 
 
